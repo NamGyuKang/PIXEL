@@ -186,6 +186,13 @@
             <div class="row mb-3 pt-1">
                 <div class="col-md-8 mx-auto">
                     <h4>Multicell Representations</h4>
+                    <p class="text-justify mt-2 pt-3">
+                        We stack up multiple coarse-grained grid representations and the representations at each collocation point computed by summing up the representations from all grids. With this method, we can inject a smooth prior and avoid overfitting.
+
+A multigrid representation is defined as four dimensional tensors in two dimensional grids (M, c, H, W). c is the size of the channel which is the input dimension of the MLP, and H and W are spatial and temporal grid sizes.
+
+We have M grids, and each grid is shifted in such a way that an input coordinate can be located in different locations in each grid. In this way, we can increase the effective grid size by a factor of M, meaning the model's expressive power will also increase. Without shifting each grid, an input coordinate lies on identical location in every grid, and each grid would represent similar values resulting in not increasing the expressive power.
+                    </p>
                     <img class="img-responsive" src="img/multicell.png" alt="PIXEL multicell">
                     <h5>1. Burgers Equation</h5>
                     <video class="full-width" controls muted loop>
