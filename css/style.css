@@ -51,6 +51,10 @@ li {
 #paper-title {
     font-size:4.0em;
 }
+#paper-accept {
+    font-size:1.5em;
+    color: gray;
+}
 #paper-subtitle {
     font-size:2.0em;
     margin-bottom: 0.5em;
