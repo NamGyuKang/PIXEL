@@ -15,7 +15,7 @@ cd PIXEL
 
 ### Create environment
 
-## We implemented the 2D, and 3D customized CUDA kernel of the triple backward grid sampler that supports cosine, linear, and smoothstep kernel~\cite{muller2022instant} and third-order gradients $u_{xxc}, u_{yyc}$ with second-order gradients~\cite{wang2022go}. As a result, the runtime and the memory requirement were significantly reduced. You can find our customized CUDA kernel code at https://github.com/NamGyuKang/CosineSampler.
+### We implemented the 2D, and 3D customized CUDA kernel of the triple backward grid sampler that supports cosine, linear, and smoothstep kernel~\cite{muller2022instant} and third-order gradients $u_{xxc}, u_{yyc}$ with second-order gradients~\cite{wang2022go}. As a result, the runtime and the memory requirement were significantly reduced. You can find our customized CUDA kernel code at https://github.com/NamGyuKang/CosineSampler.
 
 The code is tested with Python (3.8, 3.9) and PyTorch (1.11, 11.2) with CUDA (>=11.3). 
 You can create an anaconda environment with those requirements by running:
