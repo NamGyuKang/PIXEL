@@ -1,0 +1,21 @@
+@inproceedings{wang2022go-surf,
+  author={Wang, Jingwen and Bleja, Tymoteusz and Agapito, Lourdes},
+  booktitle={2022 International Conference on 3D Vision (3DV)},
+  title={GO-Surf: Neural Feature Grid Optimization for Fast, High-Fidelity RGB-D Surface
+  Reconstruction},
+  year={2022},
+  organization={IEEE}
+}
+
+@article{muller2022instant,
+	year = 2022,
+	month = {jul},
+	publisher = {Association for Computing Machinery ({ACM})},
+	volume = {41},
+	number = {4},
+	pages = {1--15},
+	author = {Thomas Müller and Alex Evans and Christoph Schied and Alexander Keller},
+	title = {Instant neural graphics primitives with a multiresolution hash encoding},
+	journal = {{ACM} Transactions on Graphics}
+}
+
