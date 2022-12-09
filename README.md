@@ -28,6 +28,7 @@ conda activate pixel
 You need to install CosineSampler at https://github.com/NamGyuKang/CosineSampler.
 
 ## 2. Run
+You can run PIXEL directly using the following code.
 ```
 [convection equation]
 ## Forward problem ##
@@ -165,7 +166,6 @@ python main.py --network base --pde navier_stokes_3d --in-dim 3 --out-dim 3 --us
 python main.py --network base --pde navier_stokes_3d --in-dim 3 --out-dim 3 --num-train 100000 --num-init 100000 --num-test 250 --hidden-dim 20 --num-layers 10 --max-iter 1001 --f-scale 1.25 --seed 300 --problem inverse --tag sample_tag
 ```
 
-You can directly run PIXEL with command.txt contents.
 
 # Citation
 If you use this code in your research, please consider citing:
