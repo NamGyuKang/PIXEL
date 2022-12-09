@@ -28,7 +28,7 @@ conda activate pixel
 You need to install CosineSampler at https://github.com/NamGyuKang/CosineSampler.
 
 ## 2. Run
-You can run PIXEL directly using the following code. it is the part of the command.txt file.
+You can run PIXEL directly using the following code. It is the part of the command.txt file.
 ```
 [burgers equation]
 ## Forward problem ##
