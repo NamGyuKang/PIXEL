@@ -1,7 +1,7 @@
 ## PIXEL: Physics-Informed Cell Representations for Fast and Accurate PDE Solvers
 ### AAAI 2023 (Accept)
 ### DLDE-II, NeurIPS 2022 Workshop (Spotlight)
-[Project page](https://namgyukang.github.io/PIXEL/) [Paper-Arxiv](https://arxiv.org/abs/2207.12800) [Paper-Workshop](https://openreview.net/forum?id=t49TL3qzma)
+[[Project page]](https://namgyukang.github.io/PIXEL/) [[Paper-Arxiv]](https://arxiv.org/abs/2207.12800) [[Paper-Workshop]](https://openreview.net/forum?id=t49TL3qzma)
 
 ## Quick Start
 
