@@ -67,8 +67,7 @@ python main.py --network base --pde navier_stokes_3d --in-dim 3 --out-dim 3 --nu
 
 
 # Citation
-If you use this code in your research, please consider citing:
-
+If you use this code for research, please consider citing:
 ```
 @article{kang2023pixel,
 title={PIXEL: Physics-Informed Cell Representations for Fast and Accurate PDE Solvers},
