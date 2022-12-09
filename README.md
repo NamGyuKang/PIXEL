@@ -31,8 +31,8 @@ You need to install CosineSampler at https://github.com/NamGyuKang/CosineSampler
 You can directly run PIXEL with command.txt contents.
 
 ## Reference
-#Müller 
-#Wang
+&#Müller 
+&#Wang
 
 # Citation
 If you use this code in your research, please consider citing:
