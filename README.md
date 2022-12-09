@@ -1,5 +1,43 @@
 ## PIXEL: Physics-Informed Cell Representations for Fast and Accurate PDE Solvers
-
-**Code will be coming soon**
-
+# AAAI 2023 Accept
 Project page: https://namgyukang.github.io/PIXEL/
+
+# Quick Start
+
+## 1. Installation
+
+### Clone PIXEL repo
+
+```
+git clone https://github.com/NamGyuKang/PIXEL.git
+cd PIXEL
+```
+
+### Create environment
+
+The code is tested with Python (3.8, 3.9) and PyTorch (1.11, 11.2) with CUDA (>=11.3). 
+
+We implemented the 2D, and 3D customized CUDA kernel of the triple backward grid sampler that supports cosine, linear, and smoothstep kernel~\cite{muller2022instant} and third-order gradients $u_{xxc}, u_{yyc}$ with second-order gradients~\cite{wang2022go}. As a result, the runtime and the memory requirement were significantly reduced. You can find our customized CUDA kernel code at https://github.com/NamGyuKang/CosineSampler.
+
+You can create an anaconda environment with those requirements by running:
+
+```
+conda env create -f pixel_environment.yml
+conda activate pixel
+```
+
+## 2. Run
+
+You can directly run PIXEL with command.txt contents.
+
+# Citation
+If you use this code in your research, please consider citing:
+
+```
+@article{kang2023pixel,
+title={PIXEL: Physics-Informed Cell Representations for Fast and Accurate PDE Solvers},
+author={Kang, Namgyu and Lee, Byeonghyeon and Hong, Youngjoon and Yun, Seok-Bae and Park, Eunbyung},
+journal={Proceedings of the AAAI Conference on Artificial Intelligence}, 
+year={2023}}
+                    
+```
