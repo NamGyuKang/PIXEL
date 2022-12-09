@@ -2,7 +2,7 @@
 ### AAAI 2023 Accept
 Project page: https://namgyukang.github.io/PIXEL/
 
-# Quick Start
+## Quick Start
 
 ## 1. Installation
 
