@@ -1,5 +1,5 @@
 ## PIXEL: Physics-Informed Cell Representations for Fast and Accurate PDE Solvers
-# AAAI 2023 Accept
+## AAAI 2023 Accept
 Project page: https://namgyukang.github.io/PIXEL/
 
 # Quick Start
