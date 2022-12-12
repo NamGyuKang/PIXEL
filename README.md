@@ -28,12 +28,46 @@ conda activate pixel
 You need to install CosineSampler at https://github.com/NamGyuKang/CosineSampler.
 
 ## 2. Run
+You can run PIXEL directly using the following code. It is the part of the command.txt file.
+```
+[burgers equation]
+## Forward problem ##
+# Pixel 96 multicell
+python main.py --network base --pde burgers_1d --in-dim 2 --out-dim 1 --use-cell --n-cells 96 --cell-dim 4 --cell-size 16 --interp cosine --num-train 100000 --num-init 100000 --random-f --f-scale 0.01 --hidden-dim 16 --num-layers 2 --max-iter 39001 --seed 200 --tag sample_tag
+# Pixel 64 multicell
+python main.py --network base --pde burgers_1d --in-dim 2 --out-dim 1 --use-cell --n-cells 64 --cell-dim 4 --cell-size 16 --interp cosine --num-train 100000 --num-init 100000 --random-f --f-scale 0.01 --hidden-dim 16 --num-layers 2 --max-iter 39001 --seed 500 --tag sample_tag
+# Pixel 16 multicell
+python main.py --network base --pde burgers_1d --in-dim 2 --out-dim 1 --use-cell --n-cells 16 --cell-dim 4 --cell-size 16 --interp cosine --num-train 100000 --num-init 100000 --random-f --f-scale 0.01 --hidden-dim 16 --num-layers 2 --max-iter 39001 --seed 500 --tag sample_tag
 
-You can directly run PIXEL with command.txt contents.
+# PINN
+python main.py --network base --pde burgers_1d --in-dim 2 --out-dim 1 --num-train 100000 --num-init 100000 --f-scale 0.01 --hidden-dim 40 --num-layers 9 --max-iter 39001 --seed 200 --tag sample_tag
+
+## Inverse problem ##
+# PIXEL
+python main.py --network base --pde burgers_1d --in-dim 2 --out-dim 1 --use-cell --n-cells 192 --cell-dim 4 --cell-size 16 --interp cosine --num-train 100000 --num-init 100000 --random-f --f-scale 0.0005 --hidden-dim 16 --num-layers 2 --max-iter 41 --problem inverse --seed 500 --tag sample_tag
+# PINN
+python main.py --network base --pde burgers_1d --in-dim 2 --out-dim 1 --num-train 100000 --num-init 100000 --f-scale 0.0005 --hidden-dim 40 --num-layers 9 --max-iter 41 --problem inverse --seed 500 --tag sample_tag
+
+
+# 3D - Helmholtz
+## Forward problem ##
+# PIXEL
+python main.py --network base --pde helmholtz_3d --a1 7.0 --a2 7.0 --a3 7.0 --in-dim 3 --out-dim 1 --use-cell --n-cells 16 --cell-dim 4 --cell-size 16 --interp cosine --num-train 400000 --num-init 400000 --num-test 100 --random-f --hidden-dim 16 --num-layers 2 --max-iter 11001 --f-scale 0.01 --seed 200 --tag sample_tag 
+# PINN
+python main.py --network base --pde helmholtz_3d --a1 7.0 --a2 7.0 --a3 7.0 --in-dim 3 --out-dim 1 --num-train 400000 --num-init 400000 --num-test 100 --random-f --hidden-dim 100 --num-layers 8 --max-iter 11001 --f-scale 0.01 --seed 200 --tag sample_tag 
+
+
+# 3D - Navier-Stokes
+## Inverse problem ##
+# PIXEL
+python main.py --network base --pde navier_stokes_3d --in-dim 3 --out-dim 3 --use-cell --n-cells 150 --cell-dim 4 --cell-size 16 --interp cosine --num-train 100000 --num-init 100000 --random-f --f-scale 1.25 --hidden-dim 16 --num-layers 2 --max-iter 501 --seed 300 --problem inverse --tag sample_tag 
+# PINN
+python main.py --network base --pde navier_stokes_3d --in-dim 3 --out-dim 3 --num-train 100000 --num-init 100000 --num-test 250 --hidden-dim 20 --num-layers 10 --max-iter 1001 --f-scale 1.25 --seed 300 --problem inverse --tag sample_tag
+```
+
 
 # Citation
-If you use this code in your research, please consider citing:
-
+If you use this code for research, please consider citing:
 ```
 @article{kang2023pixel,
 title={PIXEL: Physics-Informed Cell Representations for Fast and Accurate PDE Solvers},
