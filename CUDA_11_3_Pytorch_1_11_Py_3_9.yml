@@ -1,4 +1,4 @@
-name: pixel_
+name: pixel
 channels:
   - pytorch3d
   - bottler
