@@ -22,10 +22,13 @@ The code is tested with Python (3.8, 3.9) and PyTorch (1.11, 11.2) with CUDA (>=
 You can create an anaconda environment with those requirements by running:
 
 ```
-conda env create -f pixel_environment.yml
-conda activate pixel
+if you use CUDA 11.3, Pytorch 1.11, Python 3.9,
+  - conda env create -f CUDA_11_3_Pytorch_1_11_Py_3_9.yml
+or with CUDA 11.6, Pytorch 1.12, Python 3.8,
+  - conda env create -f CUDA_11_6_Pytorch_1_12_Py_3_8.yml
+  
+-  conda activate pixel
 ```
-You need to install CosineSampler at https://github.com/NamGyuKang/CosineSampler.
 
 ## 2. Run
 You can run PIXEL directly using the following code. It is the part of the command.txt file.
