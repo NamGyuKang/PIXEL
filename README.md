@@ -31,7 +31,7 @@ or with CUDA 11.6, Pytorch 1.12, Python 3.8,
 ```
 
 PIXEL can also be run without CosineSampler, which is a speed-acceleration and memory-efficient interpolation function code using CUDA  
-(3-order gradient available code). You can run the Python based code of the interpolation function which doesn't use CUDA with the '--cuda-off' command. With this option, you can calculate the high-order gradient (>= 4-order) by the PyTorch's Autograd.
+(3-order gradient available code). You can run the Python based code of the interpolation function which doesn't use CUDA with the '--cuda-off' command. 
 
 ## 2. Run
 You can run PIXEL directly using the following code. It is the part of the command.txt file.
