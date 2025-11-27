@@ -82,4 +82,3 @@ dependencies:
     - tqdm==4.64.1
     - git+https://github.com/NamGyuKang/CosineSampler
 
-prefix: /home/kng/anaconda3/envs/pixel
