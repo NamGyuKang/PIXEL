@@ -25,13 +25,22 @@ You can create an anaconda environment with those requirements by running:
 ```
 if you use CUDA 11.8, Pytorch 2.7.1, Python 3.10,
   - conda env create -f CUDA_11_8_Pytorch_2_7_1_Py_3_10.yml
+
+  - pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu118
+
+  - pip install --no-build-isolation submodules/CosineSampler
+```
+
+```
 if you use CUDA 11.3, Pytorch 1.11, Python 3.9,
   - conda env create -f CUDA_11_3_Pytorch_1_11_Py_3_9.yml
 or with CUDA 11.6, Pytorch 1.12, Python 3.8,
   - conda env create -f CUDA_11_6_Pytorch_1_12_Py_3_8.yml
 
-pip install --no-build-isolation submodules/CosineSampler
+  - pip install --no-build-isolation submodules/CosineSampler
+```
 
+```
 -  conda activate pixel
 ```
 
