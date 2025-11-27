@@ -10,23 +10,28 @@
 ### Clone PIXEL repo
 
 ```
-git clone https://github.com/NamGyuKang/PIXEL.git
+# Clone with submodules
+git clone --recursive https://github.com/NamGyuKang/PIXEL.git
 cd PIXEL
 ```
 
 ### Create environment
 
-#### We implemented the 2D, and 3D customized CUDA kernel of the triple backward grid sampler that supports cosine, linear, and smoothstep kernel [(Thomas Müller)](https://nvlabs.github.io/instant-ngp/) and third-order gradients $u_{xxc}, u_{yyc}$ with second-order gradients [(Tymoteusz Bleja)](https://github.com/tymoteuszb/smooth-sampler.git). As a result, the runtime and the memory requirement were significantly reduced. You can find our customized CUDA kernel code at https://github.com/NamGyuKang/CosineSampler.
+#### We implemented the 2D, and 3D customized CUDA kernel of the triple backward grid sampler that supports cosine, linear, and smoothstep kernel [(Thomas Müller)](https://nvlabs.github.io/instant-ngp/) and third-order gradients $u_{xxc}, u_{yyc}$ with second-order gradients [(Tymoteusz Bleja)](https://github.com/tymoteuszb/smooth-sampler.git). As a result, the runtime and the memory requirement were significantly reduced. You can find our customized CUDA kernel code at https://github.com/NamGyuKang/CosineSampler. (submodules folder)
 
-The code is tested with Python (3.8, 3.9) and PyTorch (1.11, 11.2) with CUDA (>=11.3). 
+The code is tested with Python (3.8, 3.9, 3.10) and PyTorch (1.11, 1.12, 2.7.1) with CUDA (11.3, 11.8). 
 You can create an anaconda environment with those requirements by running:
 
 ```
+if you use CUDA 11.8, Pytorch 2.7.1, Python 3.10,
+  - conda env create -f CUDA_11_8_Pytorch_2_7_1_Py_3_10.yml
 if you use CUDA 11.3, Pytorch 1.11, Python 3.9,
   - conda env create -f CUDA_11_3_Pytorch_1_11_Py_3_9.yml
 or with CUDA 11.6, Pytorch 1.12, Python 3.8,
   - conda env create -f CUDA_11_6_Pytorch_1_12_Py_3_8.yml
-  
+
+pip install --no-build-isolation submodules/CosineSampler
+
 -  conda activate pixel
 ```
 
