@@ -1,0 +1,3 @@
+[submodule "external/CosineSampler"]
+	path = external/CosineSampler
+	url = https://github.com/NamGyuKang/CosineSampler.git
